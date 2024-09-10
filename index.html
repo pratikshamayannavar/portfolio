@@ -9,6 +9,35 @@
       rel="stylesheet"
     />
     <style>
+      .btn-custom {
+        text-decoration: none;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        padding: 0.35rem 0.8rem;
+        border-radius: 0.38rem;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+      }
+
+      .btn-custom:hover {
+        text-decoration: none;
+        background-color: black;
+        color: white;
+      }
+
+      /* Remove default focus (blue outline) and active (blue background) styles */
+      .btn-custom:focus,
+      .btn-custom:active {
+        text-decoration: none;
+        background-color: black; /* Keep the black background when clicked */
+        color: white; /* Keep white text when clicked */
+        border-color: black; /* Keep border black */
+        box-shadow: none; /* Remove the blue focus shadow */
+        outline: none; /* Remove the blue focus outline */
+      }
+
       .section-title {
         margin-bottom: 3rem;
       }
@@ -62,25 +91,17 @@
       <section class="d-flex justify-content-center my-4">
         <a
           href="https://drive.google.com/file/d/1wtmstiLyl647mJEuoF6whS0GGz5bb3I9/view?usp=sharing"
-          class="btn btn-primary btn-custom"
+          class="btn-custom"
           >Resume</a
         >
-        <button
-          onclick="scrollToSection('projects')"
-          class="btn btn-primary btn-custom"
-        >
+        <button onclick="scrollToSection('projects')" class="btn-custom">
           Projects
         </button>
-        <button
-          onclick="scrollToSection('certificates')"
-          class="btn btn-primary btn-custom"
-        >
+
+        <button onclick="scrollToSection('certificates')" class="btn-custom">
           Certificates
         </button>
-        <button
-          onclick="scrollToSection('contact')"
-          class="btn btn-primary btn-custom"
-        >
+        <button onclick="scrollToSection('contact')" class="btn-custom">
           Contact
         </button>
       </section>
